@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
 body {
+
+}
+.wrapper {
   height: 100vh;
 }
 main {
  height: 100%;
  background-color: green;
  overflow: auto;
-
+ margin-left: 200px;
 }
 /* Mix */
 /* Nav left aside */
@@ -36,11 +39,28 @@ main {
 .upgrade {
   width: calc(100% - 200px);
   height: 50px;
-  background-color: yellow;
+  background-color: rgba(0, 0, 0, 0.5);
   margin-left: 200px;
   position: fixed;
   top: 0;
+  display: flex;
+  justify-content: flex-end;
 }
+.btn-upgrade {
+ margin: 10px 20px;
+ padding: 10px 10px;
+}
+/* List Discover */
+.list-discover {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+.list-discover ul li {
+  display: inline-block;
+}
+
+
 /* Container Songs */
 .container-songs {
   display: flex;
@@ -54,10 +74,10 @@ main {
 
 }
 .box-img {
-  flex-basis: calc((100% / 4) - 4px);
+  flex-basis: calc((100% / 4) - 20px);
   height: 200px;
   background-color: lightblue;
-  padding: 40px 40px;
+  margin: 8px 10px;
 }
 /* Footer */
 footer {
@@ -70,4 +90,7 @@ footer {
 .song-info {
   display: flex;
   justify-content: space-between;
+}
+.song-player ul li , .song-volume ul li {
+  display: inline-block;
 }
