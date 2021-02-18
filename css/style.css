@@ -16,6 +16,9 @@ main {
  margin-left: 200px;
 }
 /* Mix */
+.list-inline ul li {
+  display: inline-block;
+}
 /* Nav left aside */
 .nav-left {
   width: 200px;
@@ -56,9 +59,6 @@ main {
   margin-top: 50px;
   padding: 20px 0;
 }
-.list-discover ul li {
-  display: inline-block;
-}
 
 
 /* Container Songs */
@@ -71,12 +71,18 @@ main {
   height: 100%;
   background-color: pink;
   margin: auto;
-
+  padding: 50px 0;
 }
 .box-img {
-  flex-basis: calc((100% / 4) - 20px);
+  flex-basis: calc((100% / 6) - 20px);
   height: 200px;
   background-color: lightblue;
+  margin: 8px 10px;
+}
+.box-img-2 {
+  flex-basis: calc((100% / 4) - 20px);
+  height: 200px;
+  background-color: purple;
   margin: 8px 10px;
 }
 /* Footer */
@@ -91,6 +97,6 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.song-player ul li , .song-volume ul li {
+/* .song-player ul li , .song-volume ul li {
   display: inline-block;
-}
+}  */
