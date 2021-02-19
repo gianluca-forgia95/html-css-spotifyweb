@@ -26,6 +26,9 @@ a {
 .color-grey {
   color: #7A7A7E;
 }
+.color-white {
+  color: #fff;
+}
 /* Nav left aside */
 .nav-left {
   width: 200px;
@@ -48,14 +51,34 @@ a {
   line-height: 30px;
   flex-basis: 20%;
 }
+.logo-responsive i {
+  display: none;
+}
+.home li a {
+  color: #7A7A7E;
+}
 .playlist-list {
   padding: 20px 0;
   line-height: 30px;
-  flex-basis: 60%;
+  flex-basis: 50%;
   overflow: auto;
 }
+.title-list {
+  font-size: 20px;
+  font-weight: bold;
+}
+.playlist-list li a {
+  color: #7A7A7E;
+  font-size: 12px;
+}
 .install {
-  flex-basis: 20%;
+  flex-basis: 30%;
+}
+.download , .account-name {
+  padding: 10px 0;
+}
+.download li a {
+  color: #7A7A7E;
 }
 /* Upgrade */
 .upgrade {
@@ -127,6 +150,9 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+.song-info a {
+  color: #fff;
+}
 /* Song */
 .song {
   display: flex;
@@ -188,4 +214,41 @@ padding: 30px 0;
   width: 40px;
   height: 2px;
   background-color: #fff;
+}
+/* Responsive */
+@media screen and (max-width: 576px) {
+  hr {
+    display: none;
+  }
+  /* Navbar Aside */
+  .home {
+    padding: 0;
+    align-self: flex-start;
+  }
+  .home span {
+    display: none;
+  }
+  .install span {
+    display: none;
+  }
+  .playlist-list {
+    display: none;
+  }
+  .nav-left {
+    justify-content: space-between;
+  }
+  .logo-responsive i {
+    color: #fff;
+    font-size: 20px;
+    display: block;
+  }
+  .logo-spotify {
+    display: none;
+  }
+  .install {
+    flex-basis: 15%;
+  }
+  /* /Navbar Aside */
+
+
 }
