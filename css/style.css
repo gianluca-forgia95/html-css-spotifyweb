@@ -20,14 +20,21 @@ main {
 .list-inline ul li {
   display: inline-block;
 }
+a {
+  text-decoration: none;
+}
+.color-grey {
+  color: #7A7A7E;
+}
 /* Nav left aside */
 .nav-left {
   width: 200px;
   height: 100%;
   background-color: #000;
   position: fixed;
+  display: flex;
+  flex-direction: column;
   left: 0;
-  color: #fff;
   padding: 20px 20px;
 }
 .logo-spotify img {
@@ -37,13 +44,18 @@ main {
   list-style: none;
 }
 .home {
-  padding: 40px 0;
+  padding: 20px 0;
+  line-height: 30px;
+  flex-basis: 20%;
 }
 .playlist-list {
-  padding: 40px 0;
+  padding: 20px 0;
+  line-height: 30px;
+  flex-basis: 60%;
+  overflow: auto;
 }
 .install {
-  margin-top: 200px;
+  flex-basis: 20%;
 }
 /* Upgrade */
 .upgrade {
@@ -57,8 +69,21 @@ main {
   justify-content: flex-end;
 }
 .btn-upgrade {
- margin: 10px 20px;
- padding: 10px 10px;
+ width: 190px;
+ height: 30px;
+ line-height: 30px;
+ border: 1px solid #fff;
+ border-radius: 20px;
+ text-align: center;
+ margin-right: 5%;
+ margin-top: 1%;
+ transition: transform 0.5s;
+}
+.btn-upgrade:hover {
+  transform: scale(1.5);
+}
+.btn-upgrade a {
+  color: #fff;
 }
 /* List Discover */
 .list-discover {
@@ -102,6 +127,12 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-/* .song-player ul li , .song-volume ul li {
-  display: inline-block;
-}  */
+.song-author {
+  display: flex;
+  justify-content: space-around;
+}
+.song-img img {
+  max-width: 100px;
+  max-height: 100px;
+  padding: 10px 10px;
+}
