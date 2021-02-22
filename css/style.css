@@ -38,14 +38,18 @@ a {
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   left: 0;
-  padding: 20px 20px;
 }
 .nav-left a:hover {
   color: #fff;
 }
+.logo-spotify {
+  padding: 10px 10px;
+}
 .logo-spotify img {
   width: 100px;
+
 }
 .home ul , .playlist-list ul {
   list-style: none;
@@ -54,17 +58,23 @@ a {
   line-height: 30px;
   flex-basis: 20%;
 }
+
+.home-nav {
+  border-left: 2px solid green;
+
+}
 .logo-responsive i {
   display: none;
 }
 .home li a {
   color: #7A7A7E;
+  padding: 10px 10px;
 }
 .playlist-list {
-  padding: 20px 0;
+  padding: 20px 10px;
   line-height: 30px;
   flex-basis: 50%;
-  overflow: hidden;
+  overflow: auto;
 }
 .playlist-list span {
   color: #7A7A7E;
@@ -73,24 +83,30 @@ a {
   font-size: 30px;
   vertical-align: middle;
   margin-right: 8px;
-  color: #7A7A7E;
+  color: #fff;
 }
 .title-list {
   font-size: 20px;
   font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 40px;
+
 }
 .playlist-list li a {
   color: #7A7A7E;
   font-size: 12px;
 }
-.elenco-playlist ul {
-  overflow-y: auto;
-}
+
 .install {
   flex-basis: 30%;
+ padding: 0 10px;
+
 }
+
 .download , .account-name {
-  padding: 10px 0;
+ bottom: 0;
+ padding: 10px 0;
 }
 .download li a {
   color: #7A7A7E;
@@ -164,7 +180,7 @@ a {
   flex-wrap: wrap;
   align-items: flex-start;
   height: 100%;
-  padding: 50px 0;
+
   margin: auto;
   align-content: center;
 }
@@ -176,6 +192,7 @@ a {
 .description {
   text-align: center;
   display: block;
+  padding: 25px 0;
 }
 .description ul li {
   list-style: none;
@@ -191,7 +208,6 @@ a {
 }
 .box-img img {
   width: 100%;
-  max-height: 200px;
 }
 .overlay {
   display: none;
@@ -218,18 +234,17 @@ a {
 .add {
  display: flex;
  justify-content: center;
-margin-top: 60px;
-  font-size: 30px;
-  color: #fff;
+ margin-top: 60px;
+ font-size: 30px;
+ color: #fff;
 }
 .box-img-2 {
   flex-basis: calc((100% / 4) - 20px);
-  margin: 8px 10px;
+  margin: 10px 10px;
   position: relative;
 }
 .box-img-2 img {
   width: 100%;
- height: auto;
 }
 .box-img-2:hover div.overlay-2 {
   display: block;
@@ -267,9 +282,7 @@ margin-top: 60px;
   border-radius: 100%;
   position: relative;
 }
-.box-img-3 img{
 
-}
 .box-img-3:hover div.overlay-3 {
   display: block;
 }
@@ -289,6 +302,7 @@ margin-top: 60px;
 .add-3 {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
   font-size: 30px;
   color: #fff;
 
@@ -304,6 +318,7 @@ footer {
 .song-info {
   display: flex;
   justify-content: space-between;
+  align-content: center;
 }
 .song-info a {
   color: #fff;
@@ -355,8 +370,9 @@ padding: 30px 0;
   height: 2px;
   background-color: #fff;
 }
+
 .song-volume {
-  padding: 30px 30px;
+  padding: 50px 10px;
 }
 .time a {
   font-size: 10px;
@@ -394,25 +410,42 @@ padding: 30px 0;
     flex-basis: calc((100% / 2) - 20px);
   }
   .container-songs {
-   width: calc(100% - 100px);
+   width: calc(100% - 120px);
   }
   /* Aside Navbar */
   .install {
     margin-bottom: 60px;
   }
+  .download , .account-name {
+   bottom: 0;
+   padding: 20px 0;
+  }
   /* Footer Items */
   .song-volume {
-    padding: 0;
-    align-self: center;
-    margin-left: 40px;
-    flex-basis: 40%;
+    padding: 20px 10px;
+    flex-basis: 10%;
   }
-  footer {
-    padding-right: 100px;
+  .song-volume li a {
+    font-size: 12px;
   }
+  .volume-bar {
+    width: 120px;
+  }
+  .player li a {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+ .song-bar {
+   width: 130px;
+ }
   .song-player {
-    flex-basis: 40%;
+    flex-basis: 70%;
+    align-content: center;
   }
+  .song-time {
+    align-self: center;
+  }
+
   .song {
     flex-basis: 20%;
   }
@@ -445,8 +478,8 @@ padding: 30px 0;
   }
   /* Navbar Aside */
   .home {
-    padding: 0;
-    align-self: flex-start;
+  text-align: center;
+  align-self: flex-start;
   }
   .home span {
     display: none;
@@ -465,6 +498,7 @@ padding: 30px 0;
     color: #fff;
     font-size: 20px;
     display: block;
+    text-align: center;
   }
   .logo-spotify {
     display: none;
@@ -485,6 +519,7 @@ padding: 30px 0;
 
   .song {
     flex-basis: 15%;
+    justify-content: space-between;
   }
   .fav-library {
     display: none;
@@ -496,46 +531,27 @@ padding: 30px 0;
     position: absolute;
     font-size: 12px;
     left: 10px;
-    bottom: 2px;
+    bottom: 3px;
   }
   .song-player ul {
-    display: none;
+    align-self: flex-start;
   }
   .song-volume ul {
-    display: none;
+    align-self: flex-start;
   }
-
+ .song-volume {
+   padding: 20px 0;
+ }
+  .song-bar {
+   width: 90px;
+ }
+ .volume-bar {
+   width: 60px;
+ }
   .list-resp i {
     display: none;
   }
-  .volume-songtime-resp {
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-between;
-    align-content: flex-start;
-    margin-right: 100px;
-    flex-grow: 2;
-    flex-wrap: wrap;
-  }
-  .song-volume-resp {
-   margin-left: 50px;
-  }
-  .media-resp {
-    margin-left: 30px;
-  }
-  .song-volume-resp ul li {
-    padding: 5px 4px;
-    list-style: none;
 
-  }
- .media-resp ul li {
-   padding: 5px 10px;
-   list-style: none;
-   margin-left: 20px;
- }
- .song-bar {
-   background-color: green;
- }
 
 
 }
