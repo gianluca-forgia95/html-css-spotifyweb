@@ -61,7 +61,6 @@ a {
 
 .home-nav {
   border-left: 2px solid green;
-
 }
 .logo-responsive i {
   display: none;
@@ -74,7 +73,11 @@ a {
   padding: 20px 10px;
   line-height: 30px;
   flex-basis: 50%;
-  overflow: auto;
+  overflow: hidden;
+}
+.elenco-playlist {
+  overflow-y: auto;
+  height: 200px;
 }
 .playlist-list span {
   color: #7A7A7E;
@@ -180,7 +183,6 @@ a {
   flex-wrap: wrap;
   align-items: flex-start;
   height: 100%;
-
   margin: auto;
   align-content: center;
 }
@@ -234,7 +236,7 @@ a {
 .add {
  display: flex;
  justify-content: center;
- margin-top: 60px;
+ margin-top: 40%;
  font-size: 30px;
  color: #fff;
 }
