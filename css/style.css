@@ -77,12 +77,16 @@ a {
   flex-basis: 50%;
   overflow: hidden;
 }
+
 .elenco-playlist {
   overflow-y: auto;
   height: 200px;
 }
 .playlist-list span {
   color: #7A7A7E;
+}
+.playlist-list span:hover {
+  color: #fff;
 }
 .plus {
   font-size: 30px;
@@ -118,6 +122,7 @@ a {
  bottom: 0;
  padding: 10px 0;
 }
+
 .download  a {
   color: #7A7A7E;
 }
@@ -127,7 +132,12 @@ a {
 .download i:hover {
   font-size: 12px;
 }
-
+.rule {
+   border-top: 1px dotted #7A7A7E ;
+   border-bottom: 1px dotted #7A7A7E ;
+   border-left: 8px solid lime;
+   border-right: 8px solid lime;
+}
 /* Upgrade */
 .upgrade {
   width: calc(100% - 200px);
@@ -391,8 +401,8 @@ padding: 30px 0;
  background-color: #7A7A7E;
  vertical-align: middle;
 }
-.song-bar:hover {
- background-color: green;
+.song-bar:hover::before {
+ background-color: lime;
 }
 .song-bar::before {
   content: '';
@@ -401,7 +411,7 @@ padding: 30px 0;
   height: 2px;
   background-color: #fff;
 }
-
+/* Volume */
 .song-volume {
   padding: 50px 10px;
 }
@@ -417,8 +427,8 @@ padding: 30px 0;
   background-color: #7A7A7E;
   vertical-align: middle;
 }
-.volume-bar:hover {
-  background-color: green;
+ .volume-bar:hover::before {
+  background-color: lime;
 }
 .volume-bar::before  {
   content: '';
@@ -427,10 +437,7 @@ padding: 30px 0;
   height: 2px;
   background-color: #fff;
 }
-/* Volume Songtime resp */
-.volume-songtime-resp {
-  display: none;
-}
+
 /* Responsive */
 @media screen and (max-width: 1024px) {
   /* Container Songs */
@@ -482,6 +489,7 @@ padding: 30px 0;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 767px) {
+ /* Container Songs */
   .box-img {
     flex-basis: calc((100% / 3) - 30px);
   }
@@ -542,8 +550,8 @@ padding: 30px 0;
   }
   .install {
     flex-basis: 20%;
+    margin-bottom: 0;
   }
-  /* /Navbar Aside */
   /* Container-songs */
   .box-img {
     flex-basis: calc((100% / 2) - 30px);
@@ -551,7 +559,7 @@ padding: 30px 0;
   .box-img-2 , .box-3-img {
     flex-basis: calc((100% / 2) - 20px);
   }
-  /* /Container-songs */
+
   /* Footer items */
 
   .song {
