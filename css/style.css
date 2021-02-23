@@ -582,8 +582,14 @@ padding: 30px 0;
   .song-player ul {
     align-self: flex-start;
   }
+  .player i {
+    font-size: 10px;
+  }
   .song-volume ul {
     align-self: flex-start;
+  }
+  .song-volume i {
+    font-size: 10px;
   }
  .song-volume {
    padding: 20px 0;
