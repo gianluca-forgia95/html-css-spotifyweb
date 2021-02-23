@@ -14,7 +14,7 @@ main {
  background-color: #141922;
  overflow: auto;
  margin-left: 200px;
-
+scroll-behavior: smooth;
 }
 /* Mix */
 .list-inline ul li {
@@ -58,16 +58,15 @@ a {
   line-height: 30px;
   flex-basis: 20%;
 }
-
-.home-nav {
-  border-left: 2px solid lime;
-}
 .logo-responsive i {
   display: none;
 }
 .home li a {
   color: #7A7A7E;
   padding: 10px 10px;
+}
+.home li a:hover {
+  border-left: 2px solid lime;
 }
 .playlist-list {
   padding: 20px 10px;
@@ -87,6 +86,10 @@ a {
   vertical-align: middle;
   margin-right: 8px;
   color: #fff;
+  transition: font-size 0.3s;
+}
+.plus:hover {
+  font-size: 40px;
 }
 .title-list {
   font-size: 20px;
@@ -94,26 +97,35 @@ a {
   text-transform: uppercase;
   color: #fff;
   line-height: 40px;
-
 }
 .playlist-list li a {
   color: #7A7A7E;
   font-size: 12px;
+  padding: 0 5px;
+  transition: border-left 0.5s;
 }
-
+.playlist-list li a:hover {
+  border-left: 2px solid lime;
+}
 .install {
   flex-basis: 30%;
  padding: 0 10px;
-
 }
-
 .download , .account-name {
  bottom: 0;
  padding: 10px 0;
 }
-.download li a {
+.download  a {
   color: #7A7A7E;
+
 }
+.download i {
+  transition: font-size 0.4s;
+}
+.download i:hover {
+  font-size: 12px;
+}
+
 /* Upgrade */
 .upgrade {
   width: calc(100% - 200px);
@@ -154,10 +166,12 @@ a {
   transition: font-size 0.4s;
   font-weight: bold;
 }
-.list-discover li a {
+.list-discover a {
   color: #7A7A7E;
   padding: 0 15px;
+  transition: color 0.3s, font-size 0.3s, border-bottom 0.3s;
 }
+
 .in-evidenza::after {
   content: '';
   display: block;
@@ -169,6 +183,7 @@ a {
 .list-discover a:hover {
   color: #fff;
   font-size: 15px ;
+  border-bottom: 2px solid lime;
 }
 /* Container Songs */
 .title-section {
@@ -210,6 +225,7 @@ a {
 }
 .box-img img {
   width: 100%;
+  display: block;
 }
 .overlay {
   display: none;
@@ -247,6 +263,7 @@ a {
 }
 .box-img-2 img {
   width: 100%;
+  display: block;
 }
 .box-img-2:hover div.overlay-2 {
   display: block;
@@ -280,6 +297,8 @@ a {
   font-size: 14px;
 }
 .box-img-3 img{
+  width: 100%;
+  display: block;
   border-radius: 100%;
   position: relative;
 }
