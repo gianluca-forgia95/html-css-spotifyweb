@@ -66,10 +66,11 @@ a {
 .home li a {
   color: #7A7A7E;
   padding: 10px 10px;
-  transition: border-left 0.3s;
+  transition: border-left 0.3s, text-transfom 0.3s;
 }
 .home li a:hover {
   border-left: 2px solid lime;
+  text-transform: uppercase;
 }
 .playlist-list {
   padding: 20px 10px;
@@ -110,10 +111,11 @@ a {
   color: #7A7A7E;
   font-size: 12px;
   padding: 0 5px;
-  transition: border-left 0.5s;
+  transition: border-left 0.5s, text-transform 0.5s;
 }
 .playlist-list li a:hover {
   border-left: 2px solid lime;
+  text-transform: uppercase;
 }
 .install {
   flex-basis: 30%;
@@ -604,6 +606,9 @@ padding: 30px 0;
     display: none;
   }
 
-
-
+}
+@media screen and (max-height: 300px) {
+  .btn-upgrade {
+    display: none;
+  }
 }
